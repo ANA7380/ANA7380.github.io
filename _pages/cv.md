@@ -9,9 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-# DUAN ZIHANG RAYMOND
-
-**Computer Engineering Internship**  
+**Computer Engineering Student at the HKUST**  
 📧 zrduan@connect.ust.hk  
 📞 +852 9515 6834  
 🏠 Hong Kong  
