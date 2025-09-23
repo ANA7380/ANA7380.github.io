@@ -72,7 +72,7 @@ redirect_from:
 
 ## Networking  
 - Basic understanding of **Network Attached Storage (NAS)** concepts (currently self-studying)
-- Taking ELEC3120 currently about Computer Communication Networks
+- Taking ELEC3120 about Computer Communication Networks
 
 ## Hardware and Embedded Systems  
 - Familiarity with hardware communication protocols (e.g., ADC, I2C)  
