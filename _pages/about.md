@@ -8,7 +8,7 @@ redirect_from:
 ---
 I play rhythm games a lot....
 
-$\darr$
+↓↓↓↓↓↓↓↓
 
 
 ![](https://ana7380.github.io/images/IMG_2746.PNG)
