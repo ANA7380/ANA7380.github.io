@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "mortis.png"
+  avatar           : "mortis.jpg"
   name             : "DUAN Zihang Raymond"
   pronouns         : # example: "she/her"  
   bio              : "HKUST CPEG Year 4 Student"
