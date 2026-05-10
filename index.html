@@ -185,6 +185,7 @@
                         <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">STM32/ESP32</span>
                         <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">MIPS Architecture</span>
                         <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Hardware Communication Protocols (I2C, ADC)</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Docker</span>
                     </div>
                 </div>
             </div>
@@ -245,7 +246,9 @@
                         <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">REST APIs</span>
                         <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">Geolocation</span>
                     </div>
-                    <p>Click here for Screenshots</p>
+                    <button onclick="openScreenshotModal(['src/4521/image.png','src/4521/image2.png','src/4521/image3.png','src/4521/image4.png'])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
                 <!-- Project 2 -->
@@ -263,6 +266,9 @@
                         <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Socket.io</span>
                         <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Bcrypt</span>
                     </div>
+                    <button onclick="openScreenshotModal(['src/4021/image.png','src/4021/image2.png','src/4021/image3.png','src/4021/image4.png','src/4021/image5.png','src/4021/image6.png','src/4021/image7.png'])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
                 <!-- Project 3 -->
@@ -279,6 +285,9 @@
                         <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">UML</span>
                         <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">System Architecture</span>
                     </div>
+                    <button onclick="openScreenshotModal(['src/3111/image.png','src/3111/image2.png','src/3111/image3.png','src/3111/image4.png','src/3111/image5.png','src/3111/image6.png','src/3111/image7.png','src/3111/image8.png','src/3111/image9.png','src/3111/image10.png','src/3111/image11.png','src/3111/image12.png'])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
                 <!-- Project 4 -->
@@ -296,6 +305,9 @@
                         <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">CNN/RNN</span>
                         <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Computer Vision</span>
                     </div>
+                    <button onclick="openScreenshotModal(['src/2211/image.png','src/2211/image2.png',])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
                 <!-- Project 5 -->
@@ -401,8 +413,91 @@
         <p>© 2026 Raymond. Built for the future.</p>
     </footer>
 
+    <!-- Screenshot Modal -->
+    <div id="screenshot-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm transition-all duration-300 opacity-0">
+        <div class="relative w-full max-w-4xl mx-4 p-6 glass-panel rounded-2xl border border-white/10 shadow-2xl transform scale-95 transition-all duration-300" id="screenshot-modal-content">
+            <button onclick="closeScreenshotModal()" class="absolute -top-4 -right-4 w-10 h-10 bg-secondary border border-white/10 text-gray-400 hover:text-white rounded-full flex items-center justify-center transition-colors z-10 shadow-lg">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">Project Screenshots</h3>
+            <!-- Scrollable container for images -->
+            <div class="max-h-[75vh] overflow-y-auto pr-2 custom-scrollbar">
+                <div id="screenshot-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Images will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Custom scrollbar for modal */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(59, 130, 246, 0.5);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(59, 130, 246, 0.8);
+        }
+    </style>
+
     <!-- Scripts -->
     <script>
+        // Screenshot Modal Logic
+        const modal = document.getElementById('screenshot-modal');
+        const modalContent = document.getElementById('screenshot-modal-content');
+        const container = document.getElementById('screenshot-container');
+
+        function openScreenshotModal(images) {
+            container.innerHTML = ''; // Clear previous images
+            
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'w-full h-auto rounded-lg shadow-lg border border-white/10';
+                container.appendChild(img);
+            });
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Small delay to allow display:flex to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+            
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeScreenshotModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore body scrolling
+            }, 300);
+        }
+
+        // Close modal on background click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeScreenshotModal();
+            }
+        });
+
+
         // Sticky nav
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
