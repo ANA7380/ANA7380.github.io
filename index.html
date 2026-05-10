@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymond | Software Engineer & AI Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        secondary: '#1e293b', // slate-800
+                        dark: '#0f172a', // slate-900
+                        accent: '#8b5cf6' // violet-500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider text-white">
+                    DUAN Zihang Raymond
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#experience" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#education" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden glass-panel border-t border-white/10 absolute w-full left-0" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-1 sm:px-3 shadow-lg">
+                <a href="#about" class="mobile-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="mobile-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" class="mobile-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#projects" class="mobile-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#education" class="mobile-link text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Education</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold mb-6">
+                Available for Job Opportunities
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Raymond</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-8">
+                Computer Engineering student passionate about <span class="text-gray-200">Artificial Intelligence</span>, <span class="text-gray-200">IoT</span>, and <span class="text-gray-200">Full-Stack Software Development</span>.
+            </p>
+            <div class="flex flex-col items-center gap-3 mb-10 text-gray-300 bg-white/5 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                <p class="flex items-center gap-3 text-lg">
+                    <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                    <span>Year 4 Computer Engineering Student at HKUST (Graduating June 2026)</span>
+                </p>
+                <p class="flex items-center gap-3 text-lg">
+                    <i class="fas fa-rocket text-accent text-xl"></i>
+                    <span>Incoming MSc in Information Technology at HKUST (Sep 2026)</span>
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-lg shadow-primary/25 flex items-center">
+                    View My Work
+                </a>
+                <a href="resume.pdf" target="_blank" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3 border border-primary/50">
+                    <i class="fas fa-file-download text-primary"></i> Resume
+                </a>
+                <a href="mailto:zrduan@connect.ust.hk" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3">
+                    <i class="fas fa-envelope text-primary"></i> zrduan@connect.ust.hk
+                </a>
+                <a href="https://wa.me/85295156834" target="_blank" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3">
+                    <i class="fab fa-whatsapp text-green-500"></i> +852 9515 6834
+                </a>
+            </div>
+            <div class="mt-12 flex gap-6 text-gray-400">
+                <a href="https://github.com/ANA7380" aria-label="GitHub Profile" class="hover:text-white transition-colors text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zihang-raymond-duan-3b51682b9/" aria-label="LinkedIn Profile" class="hover:text-white transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-secondary/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Technical <span class="text-primary">Skills</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Languages -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-white border-b border-white/10 pb-2"><i class="fas fa-code text-primary mr-2"></i> Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Python</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">C/C++</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">JavaScript / Node.js</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">HTML / CSS</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Java</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white border-b border-white/10 pb-2"></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Cantonese 4.5/5</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">English 4/5</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Mandarin 4.5/5</span>
+                    </div>
+                </div>
+
+                <!-- AI / ML -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-white border-b border-white/10 pb-2"><i class="fas fa-brain text-accent mr-2"></i> AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">PyTorch</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">NumPy & Scikit-learn</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Deep Learning (CNN, RNN)</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Computer Vision</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">GAN & Transformers</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Reinforcement Learning</span>
+                    </div>
+                </div>
+
+                <!-- Backend & Systems -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-white border-b border-white/10 pb-2"><i class="fas fa-server text-green-500 mr-2"></i> Backend & Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">MySQL</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Express.js & Socket.io</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Linux</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Object-Oriented Design</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Hardware -->
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-white border-b border-white/10 pb-2"><i class="fas fa-microchip text-orange-500 mr-2"></i> Tools & Hardware</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Git</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">STM32/ESP32</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">MIPS Architecture</span>
+                        <span class="skill-badge px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm">Hardware Communication Protocols (I2C, ADC)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Work <span class="text-primary">Experience</span></h2>
+            
+            <div class="glass-panel rounded-2xl p-8 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between md:items-center mb-6 border-b border-white/10 pb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Intelli Global Corporation</h3>
+                        <p class="text-primary mt-1">Intern <span class="text-gray-400 text-sm ml-2">| Kwun Tong, Hong Kong</span></p>
+                    </div>
+                    <div class="mt-2 md:mt-0 text-left md:text-right">
+                        <p class="text-gray-300 font-medium">Jun 2025 - May 2026</p>
+                        <p class="text-gray-500 text-sm">Full-time: Jun-Aug & Jan | Part-time: Other months</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm md:text-base leading-relaxed">
+                        <li><strong class="text-white">Data Integrity & Automation:</strong> Engineered data processing scripts using Python (NumPy) to transform, clean, and validate large-scale datasets and raw CSV files, ensuring seamless integration into the project database.</li>
+                        <li><strong class="text-white">Quality Assurance:</strong> Systematically identified, reported, and verified bug fixes, collaborating closely with developers to maintain software reliability. Conducted rigorous regression testing cycles to ensure system stability following new feature deployments.</li>
+                        <li><strong class="text-white">Documentation Lifecycle Management:</strong> Managed and updated system specifications and user guides, performing cross-functional audits to ensure documentation aligned with the latest software releases.</li>
+                        <li><strong class="text-white">Technical Content Optimization:</strong> Standardized and formatted technical manuals, adding critical content updates to improve clarity and reduce user support queries.</li>
+                        <li><strong class="text-white">Strategic Collaboration:</strong> Partnered with Project Managers to provide UI/UX improvement suggestions, directly influencing the product roadmap for smart residential solutions.</li>
+                        <li><strong class="text-white">Domain Expertise (BIM):</strong> Utilized Revit for model modifications, bridging the gap between software QA and physical smart-building architectural requirements.</li>
+                        <li><strong class="text-white">System Deployment & Orchestration:</strong> Successfully deployed and configured openMAINT using Docker containers on Windows, streamlining the asset management workflow for smart building data.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary/30">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured <span class="text-primary">Projects</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">MTR Tracker Lite</h3>
+                        <i class="fas fa-subway text-primary text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 line-clamp-3 flex-grow">
+                        Built a streamlined React Native mobile app for real-time Hong Kong MTR tracking. Integrated GPS location services, MTR train APIs, and HKO weather data to deliver a fast, ad-free experience optimized for accessibility.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">React Native</span>
+                        <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">Expo</span>
+                        <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">REST APIs</span>
+                        <span class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded">Geolocation</span>
+                    </div>
+                    <p>Click here for Screenshots</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">Muse Dash Web Game</h3>
+                        <i class="fas fa-gamepad text-accent text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 line-clamp-3 flex-grow">
+                        Built a real-time backend server framework with bidirectional event-based communication. Implemented secure user authentication and password hashing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Node.js</span>
+                        <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Express</span>
+                        <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Socket.io</span>
+                        <span class="text-xs font-semibold text-accent bg-accent/10 px-2 py-1 rounded">Bcrypt</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">Library Management System</h3>
+                        <i class="fas fa-book-open text-green-500 text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 line-clamp-3 flex-grow">
+                        Designed comprehensive software architecture for a Library Management system. Developed robust use-case specifications for user roles, book publishing pipelines, access control, and status tracking dashboards.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">OOP</span>
+                        <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">UML</span>
+                        <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">System Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">AI Mini-AutoPilot</h3>
+                        <i class="fas fa-car-side text-orange-500 text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 line-clamp-3 flex-grow">
+                        Developed an autonomous driving/navigation model and various advanced neural networks. Explored Image Captioning with LSTMs, GANs, and Self-Supervised Learning models.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">PyTorch</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">CNN/RNN</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Computer Vision</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">Audio AHDSR Visualizer</h3>
+                        <i class="fas fa-wave-square text-pink-500 text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 flex-grow">
+                        Created an audio computing tool for generating and visualizing AHDSR (Attack, Hold, Decay, Sustain, Release) envelopes. Handled complex generalizations including logarithmic and exponential changes for modern audio synthesis.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Audio Processing</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Data Visualization</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Algorithms</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-white">Tiny Smart Home</h3>
+                        <i class="fas fa-home text-orange-500 text-2xl"></i>
+                    </div>
+                    <p class="text-gray-400 mb-4 flex-grow">
+                        Designed and developed a smart device using STM32F103VET6 to monitor environmental conditions with DHT11, MQ2, and UV sensors. Automated actions such as adjusting fan speed based on temperature.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">C</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Embedded Systems</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">STM32</span>
+                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Hardware Sensors</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Education & <span class="text-primary">Coursework</span></h2>
+            
+            <div class="glass-panel rounded-2xl p-8 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between md:items-start mb-6 border-b border-white/10 pb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Hong Kong University of Science and Technology (HKUST)</h3>
+                        <div class="mt-4 space-y-3">
+                            <p class="text-accent font-medium text-lg"><i class="fas fa-rocket text-sm mr-2"></i>MSc in Information Technology <span class="text-gray-400 text-sm ml-2 font-normal">| Incoming, Sep 2026</span></p>
+                            <p class="text-primary text-lg"><i class="fas fa-graduation-cap text-sm mr-2"></i>BEng in Computer Engineering<span class="text-gray-400 text-sm ml-2 font-normal">| Second Class Upper Honors | Sep 2022 - Jun 2026</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4"><i class="fas fa-graduation-cap text-gray-400 mr-2"></i>Advanced Coursework</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                        <div>
+                            <h5 class="font-medium text-gray-300 mb-2 border-b border-white/5 pb-1">AI & Vision</h5>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                                <li>Deep Learning in Computer Vision (COMP 4471)</li>
+                                <li>Practical Machine Learning (EMIA 4110)</li>
+                                <li>Fundamentals of Artificial Intelligence (COMP 3211)</li>
+                                <li>Exploring Artificial Intelligence (COMP 2211)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-gray-300 mb-2 border-b border-white/5 pb-1">Systems & Networks</h5>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                                <li>Operating Systems (COMP 3511)</li>
+                                <li>Computer Communication Networks (ELEC 3120)</li>
+                                <li>Introduction to Embedded Systems (ELEC 3300)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-gray-300 mb-2 border-b border-white/5 pb-1">Software Engineering</h5>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                                <li>Software Engineering (COMP 3111)</li>
+                                <li>Mobile Application Development (COMP 4521)</li>
+                                <li>Internet Computing (COMP 4021)</li>
+                                <li>Object-Oriented Programming and Data Structures (COMP 2012)</li>
+                                <li>Programming with C++ (COMP 2011)</li>
+                                <li>Introduction to Computer Science (COMP 1021)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-gray-300 mb-2 border-b border-white/5 pb-1">Architecture & Multimedia</h5>
+                            <ul class="list-disc list-inside text-gray-400 text-sm space-y-1">
+                                <li>Design and Analysis of Computer Architectures (COMP 4611)</li>
+                                <li>Multimedia Computing (COMP 4431)</li>
+                                <li>Computer Organization (COMP 2611)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/10 text-center text-gray-500">
+        <p>© 2026 Raymond. Built for the future.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky nav
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-secondary/80', 'shadow-lg');
+                navbar.classList.remove('border-b-0');
+            } else {
+                navbar.classList.remove('bg-secondary/80', 'shadow-lg');
+                navbar.classList.add('border-b-0');
+            }
+        });
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Project "Read more" toggle
+        document.querySelectorAll('.project-card').forEach(card => {
+            const p = card.querySelector('p');
+            if (!p) return;
+            
+            const wrapper = document.createElement('div');
+            wrapper.className = 'flex-grow mb-4 flex flex-col items-start';
+            p.parentNode.insertBefore(wrapper, p);
+            
+            p.classList.remove('mb-4', 'flex-grow');
+            p.classList.add('transition-all', 'duration-300');
+            p.classList.add('line-clamp-3');
+            
+            wrapper.appendChild(p);
+
+            setTimeout(() => {
+                if (p.scrollHeight > p.clientHeight) {
+                    const btn = document.createElement('button');
+                    btn.className = 'text-primary text-sm font-medium mt-2 hover:text-blue-400 transition-colors focus:outline-none';
+                    btn.textContent = 'Read more';
+                    
+                    wrapper.appendChild(btn);
+                    
+                    btn.addEventListener('click', () => {
+                        p.classList.toggle('line-clamp-3');
+                        btn.textContent = p.classList.contains('line-clamp-3') ? 'Read more' : 'Show less';
+                    });
+                } else {
+                    p.classList.remove('line-clamp-3');
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
