@@ -112,7 +112,7 @@
                 <a href="#projects" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all shadow-lg shadow-primary/25 flex items-center">
                     View My Work
                 </a>
-                <a href="resume.pdf" target="_blank" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3 border border-primary/50">
+                <a href="Src/CV/resume.pdf" target="_blank" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3 border border-primary/50">
                     <i class="fas fa-file-download text-primary"></i> Resume
                 </a>
                 <a href="mailto:zrduan@connect.ust.hk" class="glass-panel hover:bg-white/10 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center gap-3">
@@ -283,7 +283,7 @@
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">OOP</span>
                         <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">UML</span>
-                        <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">System Architecture</span>
+                        <span class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded">Java</span>
                     </div>
                     <button onclick="openScreenshotModal(['Src/3111/image.png','Src/3111/image2.png','Src/3111/image3.png','Src/3111/image4.png','Src/3111/image5.png','Src/3111/image6.png','Src/3111/image7.png','Src/3111/image8.png','Src/3111/image9.png','Src/3111/image10.png','Src/3111/image11.png','Src/3111/image12.png'])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
                         <i class="fas fa-images"></i> Click here for Screenshots
@@ -313,34 +313,41 @@
                 <!-- Project 5 -->
                 <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
                     <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-2xl font-bold text-white">Audio AHDSR Visualizer</h3>
-                        <i class="fas fa-wave-square text-pink-500 text-2xl"></i>
+                        <h3 class="text-2xl font-bold text-white">Fruit Ripeness Classification</h3>
+                        <i class="fas fa-apple-alt text-pink-500 text-2xl"></i>
                     </div>
                     <p class="text-gray-400 mb-4 flex-grow">
-                        Created an audio computing tool for generating and visualizing AHDSR (Attack, Hold, Decay, Sustain, Release) envelopes. Handled complex generalizations including logarithmic and exponential changes for modern audio synthesis.
+                        Trained a transfer learning model using EfficientNet-B0 to accurately classify the ripeness stages of three different types of fruits. Used YOLO to draw bounding boxes and passed these image segments as input to the model, achieving a test accuracy of 93%.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Audio Processing</span>
-                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Data Visualization</span>
-                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Algorithms</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Computer Vision</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">Transfer Learning</span>
+                        <span class="text-xs font-semibold text-pink-500 bg-pink-500/10 px-2 py-1 rounded">EfficientNet</span>
                     </div>
+                    <button onclick="openScreenshotModal(['Src/4471/image.png','Src/4471/image2.png',])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
                 <!-- Project 6 -->
                 <div class="glass-panel rounded-2xl p-6 project-card transition-all duration-300 flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-2xl font-bold text-white">Tiny Smart Home</h3>
-                        <i class="fas fa-home text-orange-500 text-2xl"></i>
+                        <i class="fas fa-home text-teal-400 text-2xl"></i>
                     </div>
                     <p class="text-gray-400 mb-4 flex-grow">
-                        Designed and developed a smart device using STM32F103VET6 to monitor environmental conditions with DHT11, MQ2, and UV sensors. Automated actions such as adjusting fan speed based on temperature.
+                        Developed a smart home system using Home Assistant and multiple ESP32 boards connected to DHT11, MQ2, and UV sensors, etc. Visualized sensor data on a Home Assistant dashboard and built a physical house model with accurately placed sensors for demonstration purposes. Designed and implemented automation scripts to automate the home's behavior based on sensor data.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">C</span>
-                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Embedded Systems</span>
-                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">STM32</span>
-                        <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 px-2 py-1 rounded">Hardware Sensors</span>
+                        <span class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-1 rounded">ESP32</span>
+                        <span class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-1 rounded">Home Assistant</span>
+                        <span class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-1 rounded">IoT</span>
+                        <span class="text-xs font-semibold text-teal-400 bg-teal-400/10 px-2 py-1 rounded">Ollama AI</span>
                     </div>
+                    <button onclick="openScreenshotModal(['Src/FYP/image.png','Src/FYP/image2.png','Src/FYP/image3.png','Src/FYP/image4.png','Src/FYP/image5.png','Src/FYP/image6.png','Src/FYP/image7.png'])" class="text-primary text-sm font-medium mt-auto hover:text-blue-400 transition-colors focus:outline-none flex items-center gap-2">
+                        <i class="fas fa-images"></i> Click here for Screenshots
+                    </button>
                 </div>
 
             </div>
