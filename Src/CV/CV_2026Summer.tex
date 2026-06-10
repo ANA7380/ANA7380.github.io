@@ -1,0 +1,97 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.45in, right=0.45in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{setspace}
+
+% Custom Colors
+\definecolor{primary}{RGB}{59, 130, 246}
+
+% Hyperlink configuration
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=magenta,
+    urlcolor=primary,
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule\vspace{1pt}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\setstretch{0.96}
+\setlist[itemize]{parsep=0pt, topsep=0pt, partopsep=0pt}
+
+\begin{document}
+
+\pagestyle{empty} % Remove page numbers
+
+% ----------------- HEADER -----------------
+\begin{center}
+    {\LARGE \textbf{DUAN Zihang Raymond}} \\ \vspace{3pt}
+    \small
+    \faEnvelope \href{mailto:zrduan@connect.ust.hk}{ zrduan@connect.ust.hk} \quad
+    \faPhone { +852 9515 6834} \quad
+    \faGithub \href{https://github.com/ANA7380}{ ANA7380} \quad
+    \faGlobe \href{https://ANA7380.github.io}{ ANA7380.github.io} \quad
+    \faLinkedin \href{https://www.linkedin.com/in/zihang-raymond-duan-3b51682b9/}{ LinkedIn} \\ \vspace{2pt}
+    \textit{Computer Engineering student passionate about AI, IoT, and Full-Stack Development.}
+\end{center}
+
+% ----------------- EDUCATION -----------------
+\section{Education}
+\begin{itemize}[leftmargin=*, label={}, itemsep=1pt]
+    \item \textbf{Hong Kong University of Science and Technology (HKUST)} \hfill \textbf{Sep 2026 Intake} \\
+    \textit{MSc in Information Technology}
+
+    \item \textbf{Hong Kong University of Science and Technology (HKUST)} \hfill \textbf{Sep 2022 -- Jun 2026} \\
+    \textit{BEng in Computer Engineering | Second Class Honors, Division 1} \\
+    \textbf{Coursework:} AI \& Vision, Systems \& Networks, Software Engineering, Architecture \& Multimedia
+\end{itemize}
+
+% ----------------- EXPERIENCE -----------------
+\section{Work Experience}
+\begin{itemize}[leftmargin=*, label={}, itemsep=1pt]
+    \item \textbf{Growgreen Limited} \hfill \textbf{Jun 2026 -- Jul 2026} \\
+    \textit{Software Engineer Intern} \hfill \textit{Science Park, Hong Kong}
+    \begin{itemize}[leftmargin=1.2em, label={--}, itemsep=0pt, topsep=1pt]
+        \item \textbf{Product Analysis:} Disassembled and studied company products to understand hardware design, component architecture, and integration requirements.
+        \item \textbf{Website Migration (Team Lead):} Led intern team to migrate the company website from WordPress to Shopify; built and customized storefront pages using Liquid and CSS.
+    \end{itemize}
+
+    \item \textbf{Intelli Global Corporation} \hfill \textbf{Jun 2025 -- May 2026} \\
+    \textit{QA Engineer Intern (Part Time and Full Time)} \hfill \textit{Kwun Tong, Hong Kong}
+    \begin{itemize}[leftmargin=1.2em, label={--}, itemsep=0pt, topsep=1pt]
+        \item \textbf{Data Integrity \& Automation:} Engineered Python (NumPy) scripts to transform, clean, and validate large-scale datasets and raw CSV files, ensuring seamless integration into the project database.
+        \item \textbf{Quality Assurance:} Identified, reported, and verified bug fixes; conducted rigorous regression testing cycles to ensure system stability following new feature deployments.
+        \item \textbf{Documentation:} Managed system specifications and user guides; standardized technical manuals to improve clarity and reduce support queries.
+        \item \textbf{Strategic Collaboration:} Partnered with Project Managers to provide UI/UX improvement suggestions, influencing the product roadmap for smart residential solutions.
+        \item \textbf{System Deployment:} Deployed and configured openMAINT using Docker on Windows, streamlining asset management for smart building data.
+    \end{itemize}
+\end{itemize}
+
+% ----------------- PROJECTS -----------------
+\section{Featured Projects}
+\begin{itemize}[leftmargin=*, label={}, itemsep=2pt]
+    \item \textbf{MTR Tracker Lite} | \textit{React Native, Expo, REST APIs} — Built a streamlined mobile app for real-time Hong Kong MTR tracking; integrated GPS, train APIs, and HKO weather data for a fast, ad-free experience.
+    \item \textbf{Muse Dash Web Game} | \textit{Node.js, Express, Socket.io, Bcrypt} — Built a real-time backend with bidirectional event-based communication; implemented secure user authentication and password hashing.
+    \item \textbf{Library Management System} | \textit{OOP, UML, Java} — Designed software architecture with use-case specifications for user roles, publishing pipelines, access control, and status tracking dashboards.
+    \item \textbf{Fruit Ripeness Classification} | \textit{Python, Transfer Learning, EfficientNet, YOLO} — Trained an EfficientNet-B0 model to classify ripeness stages of three fruit types; used YOLO bounding boxes to segment inputs, achieving 93\% test accuracy.
+    \item \textbf{Tiny Smart Home} | \textit{ESP32, Home Assistant, IoT, Ollama AI} — Built a smart home system with ESP32 sensors (DHT11, MQ2, UV); visualized data on a dashboard, built a physical demo model, and implemented automation scripts.
+\end{itemize}
+
+% ----------------- SKILLS -----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*, label={}, itemsep=1pt]
+    \item \textbf{Languages:} Python, C/C++, JavaScript/Node.js, HTML/CSS, Java
+    \item \textbf{Spoken:} Cantonese (4.5/5), English (4/5), Mandarin (4.5/5)
+    \item \textbf{AI \& ML:} PyTorch, NumPy \& Scikit-learn, Deep Learning (CNN, RNN), Computer Vision, GAN \& Transformers, Reinforcement Learning
+    \item \textbf{Backend \& Systems:} MySQL, Express.js \& Socket.io, Linux, Object-Oriented Design
+    \item \textbf{Tools \& Hardware:} Git, STM32/ESP32, MIPS Architecture, Hardware Communication Protocols (I2C, ADC), Docker
+\end{itemize}
+
+\end{document}
